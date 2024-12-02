@@ -31,7 +31,7 @@ const App = () => {
         className="flex h-screen font-montserrat transition-all duration-300 overflow-hidden"
       >
         <div className="flex-1">
-          <Navbar isOpen={navbarOpen} mostrarNavbar={mostrarNavbar} />
+          <Navbar isOpen={navbarOpen} mostrarNavbar={mostrarNavbar}/>
 
           <TransitionGroup className="flex-1 bg-custom-black">
             <CSSTransition key={location.key} timeout={500} classNames="fade">
