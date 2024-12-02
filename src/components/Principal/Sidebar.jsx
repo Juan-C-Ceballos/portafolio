@@ -10,6 +10,16 @@ import GithubBtn from "../Botones/GithubBtn";
 const Sidebar = ({ isOpen, mostrarSidebar }) => {
   const [showText, setShowText] = useState(false);
   const [isShadowActive, setIsShadowActive] = useState(false);
+  const [imageOpacity, setImageOpacity] = useState(1);
+
+  useEffect(() => {
+    if (isOpen) {
+      setImageOpacity(1);
+    } else {
+      setImageOpacity(0);
+      setTimeout(() => setImageOpacity(1), 500);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {
@@ -30,10 +40,17 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
 
   return (
     <div
-      className={`flex transition-all duration-500 ${isShadowActive ? "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.7)]" : "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.5)]"} ${isOpen
-        ? "w-[40vh]"
-        : "w-[7vh]"
-        } bg-custom-gray h-screen`}
+      className={`flex transition-all duration-500 h-screen bg-custom-gray
+        
+          ${isShadowActive ? 
+            "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.7)]" 
+            : 
+            "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.5)]"} 
+        
+          ${isOpen ? 
+            "w-[40vh] bg-opacity-85 backdrop-blur-lg"
+            :
+            "w-[7vh]"}`}
     >
       <div className={`flex flex-col ${!isOpen ? "justify-between" : ""} w-full`}>
         {/* Boton Sidebar */}
@@ -57,7 +74,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               className="w-full h-full rounded-full object-cover transition-all duration-500 transform"
               style={{
                 transform: isOpen ? "scale(1)" : "scale(0.7)",
-                opacity: isOpen ? 1 : 0.7,
+                opacity: imageOpacity,
               }}
             />
           </div>

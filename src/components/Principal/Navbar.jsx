@@ -46,7 +46,7 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
       {/*Opciones de la Navbar*/}
         <div
           className={`absolute bg-custom-gray/80 rounded-md left-[0vh] lg:left-[-10vh] flex transition-transform duration-300 transform z-0 transform-opacity transition-opacity duration-500 opacity-100
-            ${isOpen ? "translate-y-[16vh] lg:translate-x-[10vh] lg:translate-y-[0vh]" : "-translate-y-full lg:-translate-x-full lg:-translate-y-[0vh] opacity-15"
+            ${isOpen ? "translate-y-[16vh] lg:translate-x-[10vh] lg:translate-y-[0vh] " : "-translate-y-full lg:-translate-x-full lg:-translate-y-[0vh] opacity-15"
             }`}
         >
           <div className="flex flex-col lg:flex-row space-y-1 lg:space-x-1 lg:space-y-0">
