@@ -37,7 +37,7 @@ const App = () => {
             <CSSTransition key={location.key} timeout={500} classNames="fade">
               <div>
                 <Routes location={location}>
-                  <Route path="/#" element={<Inicio />} />
+                  <Route path="/" element={<Inicio />} />
                   <Route path="/sobre-mi" element={<SobreMi />} />
                   <Route path="/tecnico" element={<Tecnico />} />
                   <Route path="/proyectos" element={<ResumenProyectos />} />
