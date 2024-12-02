@@ -47,8 +47,8 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
         {/* Imagen */}
         <div className="w-full flex justify-center transition-all duration-500 transform mb-4">
           <div
-            className={`overflow-hidden rounded-full transition-all hover:scale-[1.1] hover:drop-shadow-[0px_4px_6px_rgba(243,113,43,0.7)] shadow-sm duration-500 ${isOpen ? "w-[30vh] h-[30vh]" : "w-[5vh] h-[5vh]"
-              }`}
+            className={`overflow-hidden rounded-full transition-all hover:scale-[1.1] hover:drop-shadow-[0px_4px_6px_rgba(243,113,43,0.7)] shadow-sm duration-500 ${isOpen ? "w-[30vh] h-[30vh]" : "w-[5vh] h-[5vh] hidden sm:block"}  
+              `}
           >
             <img
               src="fotoJuan.jpg"
@@ -80,10 +80,10 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
             </div>
 
             <div className={`flex flex-row space-x-4 justify-center transition-opacity duration-1000 ${showText ? "opacity-100" : "opacity-0"}`}>
-              <InstagramBtn/>
-              <LinkedinBtn/>
-              <GithubBtn/>
-              <GmailBtn/>
+              <InstagramBtn />
+              <LinkedinBtn />
+              <GithubBtn />
+              <GmailBtn />
             </div>
 
           </div>
