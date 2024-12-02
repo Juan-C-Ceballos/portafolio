@@ -54,7 +54,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               src="fotoJuan.jpg"
               alt="Foto de Perfil"
               onClick={!isOpen ? mostrarSidebar : ""}
-              className="w-full h-full object-cover transition-all duration-500 transform"
+              className="w-full h-full rounded-full object-cover transition-all duration-500 transform"
               style={{
                 transform: isOpen ? "scale(1)" : "scale(0.7)",
                 opacity: isOpen ? 1 : 0.7,
