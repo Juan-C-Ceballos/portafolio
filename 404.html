@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404</title>
     <script>
-      // Redirige a la página principal (index.html) para que React maneje la ruta
-      window.location.replace(window.location.pathname + window.location.search + "#/");
+      // Redirigir a la página principal
+      window.location.replace(
+        window.location.pathname.replace('/portafolio', '') + window.location.hash
+      );
     </script>
   </head>
   <body></body>
