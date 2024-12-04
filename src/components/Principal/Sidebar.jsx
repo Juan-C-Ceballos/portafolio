@@ -48,11 +48,11 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
             "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.5)]"} 
         
           ${isOpen ? 
-            "w-[40vh] bg-opacity-85 backdrop-blur-lg"
+            "w-[40vh]"
             :
             "w-[7vh]"}`}
     >
-      <div className={`flex flex-col ${!isOpen ? "justify-between" : ""} w-full`}>
+      <div className={`flex flex-col ${!isOpen ? "justify-between" : ""}`}>
         {/* Boton Sidebar */}
         <button className="text-white m-4" onClick={mostrarSidebar}>
           <FiChevronsRight
@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
             <img
               src="fotoJuan.jpg"
               alt="Foto de Perfil"
-              onClick={!isOpen && mostrarSidebar}
+              onClick={!isOpen ? mostrarSidebar : undefined}
               className="w-full h-full rounded-full object-cover transition-all duration-500 transform"
               style={{
                 transform: isOpen ? "scale(1)" : "scale(0.7)",
@@ -87,7 +87,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               <h1 className="text-2xl font-bold mb-2">Juan Cruz Ceballos</h1>
               <h2 className="text-lg mb-1">Edad: {calcularEdad()}</h2>
               <h3 className="text-md text-gray-300 mb-1">
-                Título: <span className="font-semibold">Analista de Sistemas de Información</span>
+                Título: <span className="font-semibold">Analista Desarrollador Universitario de Sistemas de Información,</span>
               </h3>
               <h3 className="text-md text-gray-300 mb-1">
                 Estudios: <span className="font-semibold">Estudiante de Ingeniería en Sistemas de Información</span>

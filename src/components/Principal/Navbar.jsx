@@ -23,7 +23,7 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
   }, [isOpen]);
 
   return (
-    <div className="bg-custom-black text-white font-montserrat p-4 relative flex items-center space-x-4">
+    <div className="bg-custom-black text-white font-montserrat p-4 relative flex items-center space-x-4 z-0">
       {/* Boton desplegable */}
       <button
         onClick={mostrarNavbar}
