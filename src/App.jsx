@@ -11,6 +11,7 @@ import SobreMi from "./components/Secciones/SobreMi/SobreMi";
 import Tecnico from "./components/Secciones/Tecnico/Tecnico";
 import ResumenProyectos from "./components/Secciones/Proyectos/ResumenProyectos";
 import Contacto from "./components/Secciones/Contacto/Contacto";
+import Experiencia from "./components/Secciones/Experiencia/Experiencia";
 
 const App = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -34,14 +35,14 @@ const App = () => {
           <Navbar isOpen={navbarOpen} mostrarNavbar={mostrarNavbar}/>
 
           <TransitionGroup className="flex-1 bg-custom-black">
-            <CSSTransition key={location.key} timeout={500} classNames="fade">
+            <CSSTransition key={location.key} timeout={550} classNames="fade">
               <div>
                 <Routes location={location}>
                   <Route path="/" element={<Inicio />} />
                   <Route path="/sobre-mi" element={<SobreMi />} />
                   <Route path="/tecnico" element={<Tecnico />} />
                   <Route path="/proyectos" element={<ResumenProyectos />} />
-                  <Route path="/experiencia" element={<ResumenProyectos />} />
+                  <Route path="/experiencia" element={<Experiencia />} />
                   <Route path="/contacto" element={<Contacto />} />
                 </Routes>
               </div>

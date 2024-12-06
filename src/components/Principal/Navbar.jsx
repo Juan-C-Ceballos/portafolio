@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { FaHome } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { GrTechnology, GrProjects } from "react-icons/gr";
-import { MdPermContactCalendar } from "react-icons/md";
+import { MdPermContactCalendar, MdOutlineWork } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ isOpen, mostrarNavbar }) => {
@@ -14,11 +14,11 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
     if (!isOpen) {
       const interval = setInterval(() => {
         setShake((prev) => !prev);
-      }, 2000); // Sacudida cada segundo
+      }, 2000);
 
-      return () => clearInterval(interval); // Limpiar el intervalo al desmontarse
+      return () => clearInterval(interval);
     } else {
-      setShake(false); // Detener la sacudida cuando el menú está abierto
+      setShake(false);
     }
   }, [isOpen]);
 
@@ -66,6 +66,10 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
             <Link to="proyectos" className="flex items-center text-white hover:bg-custom-light-gray/20 hover:scale-[1.03] rounded-lg px-5 py-2 transition-all duration-300">
               Proyectos
               <GrProjects className="ml-2" />
+            </Link>
+            <Link to="experiencia" className="flex items-center text-white hover:bg-custom-light-gray/20 hover:scale-[1.03] rounded-lg px-5 py-2 transition-all duration-300">
+              Experiencia
+              <MdOutlineWork className="ml-2" />
             </Link>
             <Link to="contacto" className="flex items-center text-white hover:bg-custom-light-gray/20 hover:scale-[1.03] rounded-lg px-5 py-2 transition-all duration-300">
               Contacto

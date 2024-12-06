@@ -52,3 +52,52 @@
   transition: opacity 2000ms ease-in-out; /* Transición más suave para el "exit" */
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.group:hover span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(30) forwards;
+}
+
+@keyframes typing-title {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: #f3712b;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing-title {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid #f3712b; /* Efecto del cursor */
+  white-space: nowrap;
+
+  /* Animación de escritura */
+  animation: typing-title 3s steps(20) forwards, blink 0.7s step-end infinite;
+}
+
+/* Estilo cuando el texto ha terminado */
+.typing-title.finished {
+  border-right: none; /* Oculta el cursor */
+  animation: typing-title 3s steps(20) forwards; /* Mantener el texto visible */
+}

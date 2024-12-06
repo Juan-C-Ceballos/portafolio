@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
         </button>
 
         {/* Imagen */}
-        <div className="w-full flex justify-center transition-all duration-500 transform mb-4">
+        <div className="w-full flex flex-col justify-center transition-all duration-500 transform mb-4 items-center">
           <div
             className={`overflow-hidden rounded-full transition-all hover:scale-[1.1] hover:drop-shadow-[0px_4px_6px_rgba(243,113,43,0.7)] shadow-sm duration-500 ${isOpen ? "w-[30vh] h-[30vh]" : "w-[5vh] h-[5vh] hidden sm:block"}  
               `}
@@ -78,6 +78,12 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               }}
             />
           </div>
+
+          {!isOpen && (
+          <div className="text-center text-gray-300 m-1 transition-all duration-500 transform" style={{opacity: imageOpacity}}>
+            J.C.C
+          </div>
+        )}
         </div>
 
         {/* Texto*/}
@@ -102,7 +108,6 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               <GithubBtn />
               <GmailBtn />
             </div>
-
           </div>
         )}
       </div>

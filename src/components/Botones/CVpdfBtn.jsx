@@ -19,7 +19,7 @@ const CVpdfBtn = () => {
             transition-transform duration-200 hover:drop-shadow-[0px_2px_6px_rgba(192,33,56,1)] hover:scale-[1.05]"
             onClick={abrirCVpdf}
          >
-            Descargar CV
+            Ver mi CV
         </button>
     )
 }
