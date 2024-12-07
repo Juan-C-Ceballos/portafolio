@@ -25,6 +25,9 @@ export default {
       animation: {
         grow: 'grow 0.5s ease-out forwards',
       },
+      screens: {
+        'md-lg': '1280px',
+      },
     },
   },
   plugins: [],
