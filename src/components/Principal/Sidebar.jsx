@@ -68,7 +68,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
               `}
           >
             <img
-              src="fotoJuan.jpg"
+              src="foto juan.jpg"
               alt="Foto de Perfil"
               onClick={!isOpen ? mostrarSidebar : undefined}
               className="w-full h-full rounded-full object-cover transition-all duration-500 transform"

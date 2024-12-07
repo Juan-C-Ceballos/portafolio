@@ -23,11 +23,11 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
   }, [isOpen]);
 
   return (
-    <div className="bg-custom-black text-white font-montserrat p-4 relative flex items-center space-x-4 z-0">
+    <div className="bg-custom-black text-white font-montserrat p-4 relative flex items-center space-x-4">
       {/* Boton desplegable */}
       <button
         onClick={mostrarNavbar}
-        className={`bg-custom-gray px-4 py-2 rounded-md z-10 
+        className={`bg-custom-gray px-4 py-2 rounded-md z-20 
           ${!isOpen ? "transform scale-[1.0] transition-transform duration-300 hover:scale-[1.03]" : "hover:scale-[1.03]"} 
           ${shake ? "animate-shake" : ""}
         `}
@@ -45,7 +45,7 @@ const Navbar = ({ isOpen, mostrarNavbar }) => {
 
       {/*Opciones de la Navbar*/}
         <div
-          className={`absolute bg-custom-gray/80 rounded-md left-[0vh] lg:left-[-10vh] flex transition-transform duration-300 transform z-0 transform-opacity transition-opacity duration-500 opacity-100
+          className={`absolute bg-custom-gray/80 rounded-md left-[0vh] lg:left-[-10vh] flex transition-transform duration-300 transform z-10 transform-opacity transition-opacity duration-500 opacity-100
             ${isOpen ? "translate-y-[16vh] lg:translate-x-[10vh] lg:translate-y-[0vh] " : "-translate-y-full lg:-translate-x-full lg:-translate-y-[0vh] opacity-15"
             }`}
         >

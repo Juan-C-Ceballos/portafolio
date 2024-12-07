@@ -123,7 +123,7 @@ const Inicio = () => {
                 </div>
             )}
 
-            <div className="flex flex-col justify-center md-lg:grid z-10 md-lg:grid-cols-[0.4fr,2fr,0.1fr,2fr,1fr,1fr] md-lg:grid-rows-[6fr,1fr] md-lg:gap-4 ">
+            <div className="flex flex-col justify-center md-lg:grid z-auto md-lg:grid-cols-[0.4fr,2fr,0.1fr,2fr,1fr,1fr] md-lg:grid-rows-[6fr,1fr] md-lg:gap-4 ">
                 <div className="md-lg:col-start-2 flex flex-col items-center md-lg:row-start-1">
                     <div
                         className={`md-lg:h-[50vh] md-lg:w-[50vh] h-[20vh] w-[20vh] m-4 transition-all duration-500 hover:scale-[1.05] hover:drop-shadow-[0px_4px_6px_rgba(243,113,43,0.7)]
@@ -132,7 +132,7 @@ const Inicio = () => {
                         onMouseLeave={() => setHovered((prev) => ({ ...prev, image: false }))}
                     >
                         <img
-                            src="fotoJuan.jpg"
+                            src="foto juan.jpg"
                             alt="Foto de Perfil"
                             className="w-full h-full object-cover rounded-full"
                         />
