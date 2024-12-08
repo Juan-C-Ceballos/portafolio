@@ -61,9 +61,9 @@ const Inicio = () => {
 
 
     return (
-        <div className="bg-custom-black min-h-screen flex items-start md-lg:items-center text-white overflow-y-auto">
+        <div className="bg-custom-black flex items-start min-h-screen overflow-y-auto md-lg:items-center text-white ">
             {/* Figuras esquina superior derecha */}
-            <div className="hidden sm:block z-0">
+            <div className="hidden sm:block z-0 ">
                 <img
                     src="rectangulos.png"
                     className={`absolute top-[3vh] right-[10vh] h-[55vh] md-lg:opacity-70 transition-all duration-1000 ${activeEffect ? "scale-[1.02]" : undefined}`}>
@@ -87,10 +87,10 @@ const Inicio = () => {
             </div>
 
             {/* Figuras esquina inferior izquierda*/}
-            <div className="hidden sm:block z-0">
+            <div className="hidden sm:block z-0 ">
                 <img
                     src="rectangulos.png"
-                    className={`absolute bottom-[3vh] left-[0vh] h-[55vh] rotate-180 md-lg:opacity-50 transition-all duration-1000 ${!activeEffect ? "scale-[1.02]" : undefined}`}>
+                    className={`absolute bottom-[3vh] left-[0vh] h-[55vh] rotate-180 md-lg:opacity-50 scale-[0.96] transition-all duration-1000 ${!activeEffect ? "scale-[1.00]" : undefined}`}>
                 </img>
                 <img
                     src="cuadrado.png"
@@ -123,7 +123,7 @@ const Inicio = () => {
                 </div>
             )}
 
-            <div className="flex flex-col justify-center md-lg:grid z-auto md-lg:grid-cols-[0.4fr,2fr,0.1fr,2fr,1fr,1fr] md-lg:grid-rows-[6fr,1fr] md-lg:gap-4 ">
+            <div className="flex flex-col justify-center md-lg:grid z-0 md-lg:grid-cols-[0.4fr,2fr,0.1fr,2fr,1fr,1fr] md-lg:grid-rows-[6fr,1fr] md-lg:gap-4 ">
                 <div className="md-lg:col-start-2 flex flex-col items-center md-lg:row-start-1">
                     <div
                         className={`md-lg:h-[50vh] md-lg:w-[50vh] h-[20vh] w-[20vh] m-4 transition-all duration-500 hover:scale-[1.05] hover:drop-shadow-[0px_4px_6px_rgba(243,113,43,0.7)]

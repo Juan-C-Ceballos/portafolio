@@ -29,7 +29,7 @@ const App = () => {
 
   return (
       <div
-        className="flex h-screen font-montserrat transition-all duration-300 overflow-hidden"
+        className="flex font-montserrat transition-all duration-300 overflow-hidden md-lg:h-screen "
       >
         <div className="flex-1">
           <Navbar isOpen={navbarOpen} mostrarNavbar={mostrarNavbar}/>
@@ -50,7 +50,7 @@ const App = () => {
           </TransitionGroup>
 
         </div>
-        <div>
+        <div className="flex">
           <Sidebar isOpen={sidebarOpen} mostrarSidebar={mostrarSidebar} />
         </div>
       </div>

@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, mostrarSidebar }) => {
 
   return (
     <div
-      className={`flex transition-all duration-500 h-screen bg-custom-gray
+      className={`flex transition-all duration-500 min-h-screen bg-custom-gray
         
           ${isShadowActive ? 
             "drop-shadow-[-2px_0px_6px_rgba(243,113,43,0.7)]" 
