@@ -27,6 +27,7 @@ export default {
       },
       screens: {
         'md-lg': '1280px',
+        'xs': '580px'
       },
     },
   },

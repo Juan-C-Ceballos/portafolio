@@ -4,9 +4,11 @@ import GmailBtn from "../../Botones/GmailBtn";
 import InstagramBtn from "../../Botones/InstagramBtn";
 import LinkedinBtn from "../../Botones/LinkedinBtn";
 import GithubBtn from "../../Botones/GithubBtn";
+import Fondo from "../../Fondo/Fondo";
 
 import { VscChevronRight } from "react-icons/vsc";
 import CVpdfBtn from "../../Botones/CVpdfBtn";
+
 
 const Inicio = () => {
     const [copied, setCopied] = useState(false);
@@ -63,52 +65,7 @@ const Inicio = () => {
     return (
         <div className="bg-custom-black flex items-start min-h-screen overflow-y-auto md-lg:items-center text-white ">
             {/* Figuras esquina superior derecha */}
-            <div className="hidden sm:block z-0 ">
-                <img
-                    src="rectangulos.png"
-                    className={`absolute top-[3vh] right-[10vh] h-[55vh] md-lg:opacity-70 transition-all duration-1000 ${activeEffect ? "scale-[1.02]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute top-[-19.7vh] right-[21.2vh] h-[55vh] md-lg:opacity-70 scale-[0.25] transition-all duration-1000 ${!activeEffect ? "scale-[0.27]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute top-[-23.7vh] right-[18.9vh] h-[55vh] md-lg:opacity-70 scale-[0.16] transition-all duration-1000 ${!activeEffect ? "scale-[0.18]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute top-[15vh] right-[-20vh] h-[55vh] md-lg:opacity-60 scale-[0.5] transition-all duration-1000 ${activeEffect ? "scale-[0.55]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute top-[21vh] right-[-24vh] h-[55vh] md-lg:opacity-60 scale-[0.2] transition-all duration-1000 ${!activeEffect ? "scale-[0.22]" : undefined}`}>
-                </img>
-            </div>
-
-            {/* Figuras esquina inferior izquierda*/}
-            <div className="hidden sm:block z-0 ">
-                <img
-                    src="rectangulos.png"
-                    className={`absolute bottom-[3vh] left-[0vh] h-[55vh] rotate-180 md-lg:opacity-50 scale-[0.96] transition-all duration-1000 ${!activeEffect ? "scale-[1.00]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute bottom-[12vh] left-[-35.5vh] h-[55vh] md-lg:opacity-70 scale-[0.3] transition-all duration-1000 ${activeEffect ? "scale-[0.32]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute bottom-[15vh] left-[-40vh] h-[55vh] md-lg:opacity-70 scale-[0.14] transition-all duration-1000 ${activeEffect ? "scale-[0.16]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute bottom-[-20vh] left-[13vh] h-[55vh] md-lg:opacity-70 scale-[0.23] transition-all duration-1000 ${!activeEffect ? "scale-[0.27]" : undefined}`}>
-                </img>
-                <img
-                    src="cuadrado.png"
-                    className={`absolute bottom-[-20.8vh] left-[17.5vh] h-[55vh] md-lg:opacity-70 scale-[0.15] transition-all duration-1000 ${!activeEffect ? "scale-[0.18]" : undefined}`}>
-                </img>
-            </div>
+            <Fondo/>
 
             {copied && (
                 <div
@@ -203,11 +160,11 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="md-lg:col-start-4 md-lg:col-end-6 md-lg:row-start-1 flex flex-col md-lg:grid md-lg:grid-rows-[3.5fr,2.5fr]">
+                <div className="md-lg:col-start-4 md-lg:col-end-6 md-lg:row-start-1 flex flex-col md-lg:grid md-lg:grid-rows-[3.5fr,2.5fr] ">
                     <div className="md-lg:row-span-1 md-lg:row-start-1 bg-custom-gray/30 rounded-[2vh] flex flex-col justify-end p-5 items-start md-lg:text-6xl m-4 font-semibold overflow-hidden relative">
                         <span
-                            className={`typing-title ${finished ? "finished" : undefined} text-white`}>
-                            Juan Cruz Ceballos
+                            className={`typing-title ${finished ? "finished" : undefined} text-white `}>
+                            Juan Cruz<wbr /> Ceballos
                         </span>
                     </div>
 

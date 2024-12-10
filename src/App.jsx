@@ -50,7 +50,7 @@ const App = () => {
           </TransitionGroup>
 
         </div>
-        <div className="flex">
+        <div className="absolute right-0 z-50 xs:relative xs:right-auto xs:flex xs:z-0">
           <Sidebar isOpen={sidebarOpen} mostrarSidebar={mostrarSidebar} />
         </div>
       </div>
