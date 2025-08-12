@@ -17,6 +17,8 @@ const translations = {
             copyright: "Mi Portafolio. Todos los derechos reservados.",
         },
         contact: {
+            title: "Si estas interesado en contactarme, aquí tienes mis datos:",
+            copied: "Copiado al portapapeles",
             linkedin: {
                 name: "Linkedin",
                 link: "https://www.linkedin.com/in/juan-cruz-ceballos/"
@@ -58,6 +60,8 @@ const translations = {
             copyright: "My Portfolio. All rights reserved.",
         },
         contact: {
+            title: "If you are interested in contacting me, here are my details:",
+            copied: "Copied to clipboard",
             linkedin: {
                 name: "LinkedIn",
                 link: "https://www.linkedin.com/in/juan-cruz-ceballos/"
@@ -99,6 +103,8 @@ const translations = {
             copyright: "Mein Portfolio. Alle Rechte vorbehalten.",
         },
         contact: {
+            title: "Wenn Sie daran interessiert sind, mich zu kontaktieren, finden Sie hier meine Kontaktdaten:",
+            copied: "In die Zwischenablage kopiert",
             linkedin: {
                 name: "LinkedIn",
                 link: "https://www.linkedin.com/in/juan-cruz-ceballos/"

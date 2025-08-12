@@ -5,6 +5,7 @@ import Work from "./pages/Work";
 import Academic from "./pages/Academic";
 import { LanguageProvider } from "./context/LanguageContext";
 import Layout from "./components/layout/Layout";
+import { SidebarProvider } from "./context/SidebarContext";
 
 const router = createBrowserRouter([
   {
@@ -33,10 +34,12 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <LanguageProvider>
-      <RouterProvider
-        router={router}
-        fallbackElement={<div>Cargando...</div>} // Aca puede ir un Spinner
-      />
+      <SidebarProvider>
+        <RouterProvider
+          router={router}
+          fallbackElement={<div>Cargando...</div>} // Aca puede ir un Spinner
+        />
+      </SidebarProvider>
     </LanguageProvider>
   );
 }

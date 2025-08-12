@@ -4,6 +4,7 @@ import Footer from './Footer';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
+import ContactSidebar from './Navbar/ContactSidebar';
 
 const Layout = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const Layout = () => {
     return (
         <div className={`flex flex-col min-h-screen font-inter ${bgColor}`}>
             <Navbar />
+            <ContactSidebar />
             <main className='flex-grow'>
                 <Outlet />
             </main>
