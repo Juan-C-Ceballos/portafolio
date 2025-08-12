@@ -5,6 +5,7 @@ import { FaLinkedin, FaExternalLinkAlt, FaGithub, FaPhoneAlt } from "react-icons
 import { IoIosMail, IoMdClose } from "react-icons/io";
 import { BsCopy } from "react-icons/bs";
 import { motion, AnimatePresence } from 'framer-motion';
+import CopyNotification, { handleCopy } from '../../common/CopyNotification';
 
 const ContactCard = ({ icon, text, btnIcon, action }) => {
     return (
@@ -24,26 +25,6 @@ const ContactCard = ({ icon, text, btnIcon, action }) => {
     );
 };
 
-const CopyNotification = ({ text }) => {
-    const { t } = useTranslation();
-
-    return (
-        <AnimatePresence>
-            {text && (
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{ duration: 0.3 }}
-                    className="fixed bottom-8 right-8 bg-custom-brown-300 text-custom-brown-900 px-4 py-2 rounded shadow-lg z-50"
-                >
-                    {t('contact.copied')}: {text}
-                </motion.div>
-            )}
-        </AnimatePresence>
-    );
-};
-
 const sidebarVariants = {
     hidden: { x: '-100%' },
     visible: { x: 0 },
@@ -55,16 +36,6 @@ const ContactSidebar = () => {
     const { isSidebarOpen, closeSidebar } = useSidebar();
 
     const [copiedText, setCopiedText] = useState(null);
-
-    const handleContactCopy = (text) => {
-        navigator.clipboard.writeText(text);
-        setCopiedText(text);
-
-        setTimeout(() => {
-            setCopiedText(null);
-        }, 2000); // 2 segundos visible
-    };
-
 
     return (
         <>
@@ -120,13 +91,13 @@ const ContactSidebar = () => {
                                     icon={<IoIosMail size={44} />}
                                     text={t('contact.mail.link')}
                                     btnIcon={<BsCopy size={28} />}
-                                    action={() => handleContactCopy(t('contact.mail.link'))}
+                                    action={() => handleCopy(t('contact.mail.link'), setCopiedText)}
                                 />
                                 <ContactCard
                                     icon={<FaPhoneAlt size={44} />}
                                     text={t('contact.phone.link')}
                                     btnIcon={<BsCopy size={28} />}
-                                    action={() => handleContactCopy(t('contact.phone.link'))}
+                                    action={() => handleCopy(t('contact.phone.link'), setCopiedText)}
                                 />
                             </div>
                         </motion.aside>

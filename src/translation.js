@@ -37,7 +37,7 @@ const translations = {
             }
         },
         home: {
-            title: "Hola, Soy Juan Ceballos",
+            title: "Hola, Soy Juan Cruz Ceballos",
             description: {
                 student: "Estudiante de Ingeniería en Sistemas",
                 analyst: "Analista de Sistemas",
@@ -80,7 +80,7 @@ const translations = {
             }
         },
         home: {
-            title: "Hi, I'm Juan Ceballos",
+            title: "Hi, I'm Juan Cruz Ceballos",
             description: {
                 student: "Systems Engineering Student",
                 analyst: "Systems Analyst",
@@ -123,7 +123,7 @@ const translations = {
             }
         },
         home: {
-            title: "Hallo, ich bin Juan Ceballos",
+            title: "Hallo, ich bin Juan Cruz Ceballos",
             description: {
                 student: "Student der Systemtechnik",
                 analyst: "Systemanalytiker",
