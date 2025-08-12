@@ -11,6 +11,36 @@ const translations = {
                 work: "Trabajo",
                 academic: "Académico"
             }
+        },
+        footer: {
+            name: "Juan Cruz Ceballos",
+            copyright: "Mi Portafolio. Todos los derechos reservados.",
+        },
+        contact: {
+            linkedin: {
+                name: "Linkedin",
+                link: "https://www.linkedin.com/in/juan-cruz-ceballos/"
+            },
+            github: {
+                name: "Github",
+                link: "https://github.com/Juan-C-Ceballos"
+            },
+            mail: {
+                name: "Mail",
+                link: "juancruzceballos0@gmail.com"
+            },
+            phone: {
+                name: "Telefono",
+                link: "+54 9 388 4665015"
+            }
+        },
+        home: {
+            title: "Hola, Soy Juan Ceballos",
+            description: {
+                student: "Estudiante de Ingeniería en Sistemas",
+                analyst: "Analista de Sistemas",
+                developer: "Desarrollador Frontend & Backend"
+            }
         }
     },
     en: {
@@ -22,7 +52,37 @@ const translations = {
                 work: "Work",
                 academic: "Academic"
             }
-        }
+        },
+        footer: {
+            name: "Juan Cruz Ceballos",
+            copyright: "My Portfolio. All rights reserved.",
+        },
+        contact: {
+            linkedin: {
+                name: "LinkedIn",
+                link: "https://www.linkedin.com/in/juan-cruz-ceballos/"
+            },
+            github: {
+                name: "Github",
+                link: "https://github.com/Juan-C-Ceballos"
+            },
+            mail: {
+                name: "Email",
+                link: "juancruzceballos0@gmail.com"
+            },
+            phone: {
+                name: "Phone",
+                link: "+54 9 388 4665015"
+            }
+        },
+        home: {
+            title: "Hi, I'm Juan Ceballos",
+            description: {
+                student: "Systems Engineering Student",
+                analyst: "Systems Analyst",
+                developer: "Frontend & Backend Developer"
+            }
+        },
     },
     de: {
         navbar: {
@@ -33,7 +93,37 @@ const translations = {
                 work: "Arbeit",
                 academic: "Akademisch"
             }
-        }
+        },
+        footer: {
+            name: "Juan Cruz Ceballos",
+            copyright: "Mein Portfolio. Alle Rechte vorbehalten.",
+        },
+        contact: {
+            linkedin: {
+                name: "LinkedIn",
+                link: "https://www.linkedin.com/in/juan-cruz-ceballos/"
+            },
+            github: {
+                name: "Github",
+                link: "https://github.com/Juan-C-Ceballos"
+            },
+            mail: {
+                name: "E-Mail",
+                link: "juancruzceballos0@gmail.com"
+            },
+            phone: {
+                name: "Telefon",
+                link: "+54 9 388 4665015"
+            }
+        },
+        home: {
+            title: "Hallo, ich bin Juan Ceballos",
+            description: {
+                student: "Student der Systemtechnik",
+                analyst: "Systemanalytiker",
+                developer: "Frontend- & Backend-Entwickler"
+            }
+        },
     },
 }
 
