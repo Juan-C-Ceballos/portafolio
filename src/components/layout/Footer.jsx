@@ -34,7 +34,7 @@ const Footer = () => {
                 <span> <span className='font-bold'>{t('contact.phone.name')}: </span>{t('contact.phone.link')}</span>
             </div>
         </div>
-        <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
+        <p>&copy; {new Date().getFullYear()} {t('footer.copyright')} v.1.0.0</p>
     </footer>
     );
 };
