@@ -1,15 +1,29 @@
 @import "tailwindcss";
 
- @theme {
-    --color-custom-brown-50: #f8f5f4;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+@theme {
+    --color-custom-brown-50:  #f8f5f4;
     --color-custom-brown-100: #f0e8e4;
+    --color-custom-brown-150: #e9dbd6; /* entre 100 y 200 */
     --color-custom-brown-200: #dfcfc9;
+    --color-custom-brown-250: #d7baaf; /* entre 200 y 300 */
     --color-custom-brown-300: #cbb0a6;
+    --color-custom-brown-350: #bc9a8f; /* entre 300 y 400 */
     --color-custom-brown-400: #b58c82;
+    --color-custom-brown-450: #ad7c75; /* entre 400 y 500 */
     --color-custom-brown-500: #a5736a;
+    --color-custom-brown-550: #9e6a62; /* entre 500 y 600 */
     --color-custom-brown-600: #98635e;
+    --color-custom-brown-650: #8b5a57; /* entre 600 y 700 */
     --color-custom-brown-700: #7f514f;
+    --color-custom-brown-750: #744745; /* entre 700 y 800 */
     --color-custom-brown-800: #684444;
+    --color-custom-brown-850: #573636; /* entre 800 y 900 */
     --color-custom-brown-900: #493131;
-    --color-custom-brown-950: #2d1d1d;
+    --color-custom-brown-950: #2d1d1d; /* entre 900 y 1000 */
+
+    --font-inter: 'Inter', sans-serif;
+    --font-lato: 'Lato', sans-serif;
  }

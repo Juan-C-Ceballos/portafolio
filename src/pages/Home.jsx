@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Home = () => {
     return (
-        <div className='bg-custom-brown-400 min-h-screen flex flex-col items-center justify-center'>
+        <motion.div
+            className='bg-custom-brown-100 min-h-screen flex flex-col items-center justify-center'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <h1>Home Page</h1>
             <p>Bienvenido a la página de inicio.</p>
-            <div className='flex flex-row gap-4 text-2xl font-bold cursor-pointer'>
-                <Link to="/about">About</Link>
-                <Link to="/work">Work</Link>
-                <Link to="/academic">Academic</Link>
-            </div>
-        </div>
+        </motion.div>
     );
 };
 
