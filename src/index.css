@@ -1,7 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import "tailwindcss";
 
 @theme {
     --color-custom-brown-50:  #f8f5f4;
@@ -25,5 +23,4 @@
     --color-custom-brown-950: #2d1d1d; /* entre 900 y 1000 */
 
     --font-inter: 'Inter', sans-serif;
-    --font-lato: 'Lato', sans-serif;
  }
