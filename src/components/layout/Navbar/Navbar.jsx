@@ -2,7 +2,6 @@ import React from 'react';
 import LanguageSelector from './LanguageSelector';
 import SectionSelector from './SectionSelector';
 import { useLocation } from 'react-router-dom';
-import personalPhoto from '../../../../public/personalPhoto.jpg';
 import ContactMeBTN from './ContactMeBTN';
 
 
@@ -10,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const AnimatedPhoto = ({ isVisible }) => (
     <motion.img
-        src={personalPhoto}
+        src={"personalPhoto.jpg"}
         alt="Personal"
         className="w-13 h-13 rounded-full"
         initial={{ opacity: 0 }}

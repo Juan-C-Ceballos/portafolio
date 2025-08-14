@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                 <div className='px-6 pt-4 flex flex-col justify-center'>
                     <div className='flex flex-row items-center justify-between'>
                         <h2 className='text-3xl font-bold flex-2/3'>{title}</h2>
-                        <span className='flex-1/3'>{date}</span>
+                        <span className='flex-1/3 text-end'>{date}</span>
                     </div>
 
                     <p className='text-md my-2'>{description}</p>

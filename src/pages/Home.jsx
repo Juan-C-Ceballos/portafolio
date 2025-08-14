@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import personalPhoto from '../../public/personalPhoto.jpg';
 import useTranslation from '../hooks/useTranslation';
 import { GoDotFill } from "react-icons/go";
 
@@ -12,7 +11,7 @@ import UnderlinedText from '../components/common/UnderlinedText';
 
 const AnimatedPhoto = () => (
     <motion.img
-        src={personalPhoto}
+        src={"personalPhoto.jpg"}
         alt="Personal"
         className="w-120 h-120 rounded-full"
         initial={{ opacity: 0, scale: 0.8 }}

@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import ProjectCard from '../components/work/ProjectCard';
 import useTranslation from '../hooks/useTranslation';
 
-
-
 const Work = () => {
     const { t } = useTranslation();
     const projects = t('work.projects');
