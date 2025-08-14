@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import personalPhoto from '../assets/personalPhoto.jpg';
+import personalPhoto from '../../public/personalPhoto.jpg';
 import useTranslation from '../hooks/useTranslation';
 import { GoDotFill } from "react-icons/go";
 

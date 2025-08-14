@@ -2,7 +2,7 @@ import React from 'react';
 import LanguageSelector from './LanguageSelector';
 import SectionSelector from './SectionSelector';
 import { useLocation } from 'react-router-dom';
-import personalPhoto from '../../../assets/personalPhoto.jpg';
+import personalPhoto from '../../../../public/personalPhoto.jpg';
 import ContactMeBTN from './ContactMeBTN';
 
 
