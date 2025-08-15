@@ -68,7 +68,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className='flex flex-row h-full w-full items-center gap-4 pt-10 bg-custom-brown-150 rounded-4xl'>
+                <div className='flex flex-row h-full w-full items-center gap-4 py-8 bg-custom-brown-150 rounded-4xl'>
                     <div className='w-2/3 flex flex-col items-center justify-center p-10'>
                         <UnderlinedText>
                             <h1 className='text-6xl font-bold p-2'>{t("home.title")}</h1>
