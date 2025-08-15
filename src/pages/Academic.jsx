@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import LanguageGraph from '../components/academic/LanguageGraph';
 import AcademicCard from '../components/academic/AcademicCard';
 import useTranslation from '../hooks/useTranslation';
 import UnderlinedText from '../components/common/UnderlinedText';
+import LanguageCard from '../components/academic/LanguageCard';
 
 const Academic = () => {
     const { t } = useTranslation();
     const academicItems = t('academic.academicInfo.items');
+    const languagesItems = t('academic.languageInfo.languages');
+    const languages = Object.values(languagesItems);
+
+    const [openIndex, setOpenIndex] = useState(null);
 
     return (
         <motion.div
@@ -42,14 +47,34 @@ const Academic = () => {
                         ))}
                     </div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
                         duration: 0.4,
                         scale: { type: "spring", visualDuration: 0.4, bounce: 0. },
-                    }}>
-                    <LanguageGraph />
+                    }}
+                    className='p-6 bg-custom-brown-250 rounded-4xl m-2'>
+
+                    <UnderlinedText>
+                        <h1 className='text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.languageInfo.title')}</h1>
+                    </UnderlinedText>
+
+                    <div className='bg-custom-brown-50 rounded-2xl p-8 shadow-xl
+                        flex flex-col items-center m-4'>
+                        <LanguageGraph />
+                    </div>
+                    <div className='flex gap-3 justify-center'>
+                        {languages.map((lang, index) => (
+                            <LanguageCard
+                                key={lang.name}
+                                name={lang.name}
+                                description={lang.description}
+                                isOpen={openIndex === index}
+                                onClick={() => setOpenIndex(openIndex === index ? null : index)} // toggle
+                            />
+                        ))}
+                    </div>
                 </motion.div>
             </div>
         </motion.div>

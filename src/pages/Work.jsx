@@ -26,6 +26,7 @@ const Work = () => {
                         technology={project.technology}
                         photo={project.photo}
                         longDescription={project.longDescription}
+                        language={project.language}
                         seeMore={t('work.seeMore')}
                     />
                 ))}

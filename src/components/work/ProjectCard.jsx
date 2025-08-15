@@ -6,6 +6,7 @@ import { SiSpringboot, SiTailwindcss, SiSupabase, SiFastapi, SiMiro, SiCanva } f
 import ProjectPills from './ProjectPills';
 import TechItem from './TechItem';
 import { IoMdClose } from 'react-icons/io';
+import UnderlinedText from '../common/UnderlinedText';
 
 const iconMap = {
     FaJava: <FaJava size={30} />,
@@ -21,7 +22,7 @@ const iconMap = {
     SiCanva: <SiCanva size={30} />
 };
 
-const ProjectCard = ({ title, description, date, pills, technology, photo, longDescription, seeMore }) => {
+const ProjectCard = ({ title, description, date, pills, technology, photo, longDescription, language, seeMore }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -32,7 +33,11 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                 className="bg-custom-brown-150 rounded-4xl hover:scale-102 flex flex-col justify-between
                     transition ease-in-out duration-200 shadow-lg cursor-pointer"
             >
-                <img className="rounded-t-4xl" src={photo} alt={title} />
+                <div className='relative'>
+                    <span className="absolute top-3 right-6 bg-orange-400/60 px-4 py-1 rounded-xl text-sm text-zinc-50">                        {language}
+                    </span>
+                    <img className="rounded-t-4xl" src={photo} alt={title} />
+                </div>
 
                 <div className='px-6 pt-4 flex flex-col justify-center'>
                     <div className='flex flex-row items-center justify-between'>
@@ -91,7 +96,13 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                                 </motion.button>
                             </div>
 
-                            <h2 className="text-4xl font-bold m-4">{title}</h2>
+                            <div className='flex flex-row items-center justify-start gap-4 mb-4'>
+                                <UnderlinedText>
+                                    <h2 className="text-4xl font-bold mt-4 mx-4 mb-2">{title}</h2>
+                                </UnderlinedText>
+                                <span className='bg-orange-300/80 px-4 py-1 rounded-xl text-zinc-50 
+                                hover:scale-105 transition ease-in-out duration-200'>{language}</span>
+                            </div>
                             <div className='grid grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
                                 <img src={photo} alt={title} className="rounded-3xl mb-4 col-start-1 col-span-3" />
 
