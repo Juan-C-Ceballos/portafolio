@@ -47,8 +47,8 @@ const AboutColumn = ({ title, icon, content, isActive, onClick }) => {
       <div className={`flex justify-center ${isActive ? "self-end" : "self-center"} gap-4 items-center`}>
         {isActive && (<h2 className="text-2xl font-semibold text-center">{title}</h2>)}
         {icon}
-        </div>
-      
+      </div>
+
 
       {!isActive && (
         <motion.h2
@@ -75,49 +75,49 @@ const AboutColumn = ({ title, icon, content, isActive, onClick }) => {
 };
 
 const About = () => {
-    const [active, setActive] = useState(null);
-    const { t } = useTranslation();
+  const [active, setActive] = useState(null);
+  const { t } = useTranslation();
 
-    const handleClick = (index) => {
-        if (active === index) {
-            setActive(null);
-        } else {
-            setActive(index);
-        }
-    };
+  const handleClick = (index) => {
+    if (active === index) {
+      setActive(null);
+    } else {
+      setActive(index);
+    }
+  };
 
-    return (
-        <motion.div
-            className="bg-custom-brown-400 h-screen flex flex-col items-center justify-start gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-        >
-            <div className="flex w-full gap-6 min-h-[87vh] px-6 py-5">
-                <AboutColumn
-                    title={t('aboutMe.personal.title')}
-                    content={<PersonalInfo />}
-                    icon={<FaQuestion size={50}/>}
-                    isActive={active === 0}
-                    onClick={() => handleClick(0)}
-                />
-                <AboutColumn
-                    title={t('aboutMe.technology.title')}
-                    content={<Technology />}
-                    icon={<BsFillHddStackFill size={50}/>}
-                    isActive={active === 1}
-                    onClick={() => handleClick(1)}
-                />
-                <AboutColumn
-                    title={t('aboutMe.softSkills.title')}
-                    content={<SoftSkills />}
-                    icon={<FaFeatherPointed size={50}/>}
-                    isActive={active === 2}
-                    onClick={() => handleClick(2)}
-                />
-            </div>
-        </motion.div>
-    );
+  return (
+    <motion.div
+      className="bg-custom-brown-400 h-screen flex flex-col items-center justify-start gap-8"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      <div className="flex w-full gap-6 min-h-[87vh] px-6 py-5">
+        <AboutColumn
+          title={t('aboutMe.personal.title')}
+          content={<PersonalInfo />}
+          icon={<FaQuestion size={active === null || active !== 0 ? 80 : 50} />}
+          isActive={active === 0}
+          onClick={() => handleClick(0)}
+        />
+        <AboutColumn
+          title={t('aboutMe.technology.title')}
+          content={<Technology />}
+          icon={<BsFillHddStackFill size={active === null || active !== 1 ? 80 : 50} />}
+          isActive={active === 1}
+          onClick={() => handleClick(1)}
+        />
+        <AboutColumn
+          title={t('aboutMe.softSkills.title')}
+          content={<SoftSkills />}
+          icon={<FaFeatherPointed size={active === null || active !== 2 ? 80 : 50} />}
+          isActive={active === 2}
+          onClick={() => handleClick(2)}
+        />
+      </div>
+    </motion.div>
+  );
 };
 
 export default About;

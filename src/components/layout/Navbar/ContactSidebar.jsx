@@ -74,7 +74,7 @@ const ContactSidebar = () => {
 
                             <hr className='h-1 bg-gradient-to-r from-custom-brown-300 via-custom-brown-150 to-custom-brown-300 border-0 mt-4 w-7/8' />
 
-                            <div className='flex flex-col justify-center h-full w-full gap-20'>
+                            <div className='flex flex-col justify-center h-full w-full p-2 gap-17'>
                                 <ContactCard
                                     icon={<FaLinkedin size={44} />}
                                     text={t('contact.linkedin.link')}

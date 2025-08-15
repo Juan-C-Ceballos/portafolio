@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import LanguageCard from '../components/academic/LanguageCard';
+import LanguageGraph from '../components/academic/LanguageGraph';
+import AcademicCard from '../components/academic/AcademicCard';
+import useTranslation from '../hooks/useTranslation';
+import UnderlinedText from '../components/common/UnderlinedText';
 
 const Academic = () => {
+    const { t } = useTranslation();
+    const academicItems = t('academic.academicInfo.items');
+
     return (
         <motion.div
             className='bg-custom-brown-400 min-h-screen flex flex-col items-center justify-center'
@@ -10,8 +16,42 @@ const Academic = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h1>Academic Page</h1>
-            <p>Bienvenido a la página académica.</p>
+            <div className='grid grid-cols-2 gap-8 p-4'>
+                <motion.div className='p-6 bg-custom-brown-250 rounded-4xl m-2'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.4,
+                        scale: { type: "spring", visualDuration: 0.4, bounce: 0. },
+                    }}>
+                    <UnderlinedText>
+                        <h1 className='text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.academicInfo.title')}</h1>
+                    </UnderlinedText>
+                    <div className='flex flex-col items-center justify-start max-h-[75vh] overflow-y-scroll overflow-x-hidden gap-3 custom-scrollbar px-4'>
+                        {academicItems.map((item) => (
+                            <AcademicCard
+                                key={item.title}
+                                title={item.title}
+                                institution={item.institution}
+                                date={item.date}
+                                location={item.location}
+                                icon={item.icon}
+                                photo={item.photo}
+                                inverted={item.inverted}
+                            />
+                        ))}
+                    </div>
+                </motion.div>
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.4,
+                        scale: { type: "spring", visualDuration: 0.4, bounce: 0. },
+                    }}>
+                    <LanguageGraph />
+                </motion.div>
+            </div>
         </motion.div>
     );
 };

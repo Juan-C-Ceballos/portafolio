@@ -71,7 +71,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="bg-custom-brown-150 rounded-4xl p-6 w-[170vh] max-h-[90vh] overflow-y-auto shadow-2xl"
+                            className="bg-custom-brown-150 rounded-4xl p-6 w-[170vh] max-h-[90vh] shadow-2xl"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
@@ -91,8 +91,8 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                                 </motion.button>
                             </div>
 
-                            <div className='grid grid-cols-4 gap-4'>
-                                <h2 className="text-4xl font-bold mb-4 col-start-1 col-span-4">{title}</h2>
+                            <h2 className="text-4xl font-bold m-4">{title}</h2>
+                            <div className='grid grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
                                 <img src={photo} alt={title} className="rounded-3xl mb-4 col-start-1 col-span-3" />
 
                                 <div className='grid grid-col-[0.1fr, 1fr] grid-rows col-start-4 col-span-1'>
@@ -112,7 +112,6 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                                     </div>
 
                                 </div>
-
                                 <p className="text-md mb-4 col-start-1 col-span-4">{longDescription}</p>
                             </div>
                         </motion.div>

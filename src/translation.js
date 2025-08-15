@@ -171,6 +171,40 @@ const translations = {
         },
       ],
     },
+    academic: {
+      academicInfo: {
+        title: "Formación académica",
+        items: [
+          {
+            title: "Ingeniería en Sistemas de Información",
+            institution: "Universidad Tecnologica Nacional",
+            date: "Mar 2022 - Presente",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/utnLogo.png",
+            photo: "/comingSoonPhoto.jpg",
+            inverted: false,
+          },
+          {
+            title: "Analista Universitario de Sistemas de Información",
+            institution: "Universidad Tecnologica Nacional",
+            date: "Mar 2022 - Dic 2024",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/utnLogo.png",
+            photo: "/analystPhoto.jpg",
+            inverted: true,
+          },
+          {
+            title: "Curso de Idioma Aleman Nivel A1",
+            institution: "Instituto Goethe",
+            date: "Ago 2023 - Dic 2023",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/goetheInstituteLogo.png",
+            photo: "/deutschlandPhoto.jpg",
+            inverted: false,
+          },
+        ],
+      },
+    },
   },
   en: {
     navbar: {
@@ -340,6 +374,40 @@ const translations = {
             "This academic project focused on analyzing and designing a comprehensive improvement plan for Stoller Argentina, aimed at optimizing the production process, expanding operational capacity, and modernizing the company’s technological infrastructure. The work included a detailed diagnosis using tools such as SWOT analysis, CAME matrix, and process mapping, identifying growth opportunities and critical areas for improvement. The strategic proposal was based on three main pillars: the incorporation of automation and traceability technologies, the implementation of demand analysis and forecasting systems, and the transition toward a proactive production model. In addition, organizational coordination, industrial network design, and budget projection were planned, along with an implementation timeline and control dashboards for monitoring key performance indicators.",
         },
       ],
+    },
+    academic: {
+      academicInfo: {
+        title: "Academic Background",
+        items: [
+          {
+            title: "Information Systems Engineering",
+            institution: "National Technological University",
+            date: "Mar 2022 - Present",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/utnLogo.png",
+            photo: "/comingSoonPhoto.jpg",
+            inverted: false,
+          },
+          {
+            title: "University Analyst in Information Systems",
+            institution: "National Technological University",
+            date: "Mar 2022 - Dec 2024",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/utnLogo.png",
+            photo: "/analystPhoto.jpg",
+            inverted: true,
+          },
+          {
+            title: "German Language Course Level A1",
+            institution: "Goethe Institute",
+            date: "Aug 2023 - Dec 2023",
+            location: "Córdoba, Córdoba, Argentina",
+            icon: "/goetheInstituteLogo.png",
+            photo: "/deutschlandPhoto.jpg",
+            inverted: false,
+          },
+        ],
+      },
     },
   },
   de: {
@@ -511,6 +579,40 @@ const translations = {
             "Dieses akademische Projekt konzentrierte sich auf die Analyse und Entwicklung eines umfassenden Verbesserungsplans für Stoller Argentina, mit dem Ziel, den Produktionsprozess zu optimieren, die Betriebskapazität zu erweitern und die technologische Infrastruktur des Unternehmens zu modernisieren. Die Arbeit umfasste eine detaillierte Diagnose mithilfe von Werkzeugen wie SWOT-Analyse, CAME-Matrix und Prozessmapping, um Wachstumschancen und kritische Verbesserungsbereiche zu identifizieren. Der strategische Vorschlag basierte auf drei Hauptsäulen: der Einführung von Automatisierungs- und Rückverfolgbarkeitstechnologien, der Implementierung von Systemen zur Analyse und Prognose der Nachfrage sowie dem Übergang zu einem proaktiven Produktionsmodell. Darüber hinaus wurden die organisatorische Koordination, das industrielle Netzwerkschema und die Budgetprognose geplant, zusammen mit einem Implementierungszeitplan und Kontroll-Dashboards zur Überwachung wichtiger Leistungsindikatoren.",
         },
       ],
+    },
+    academic: {
+      academicInfo: {
+        title: "Akademische Ausbildung",
+        items: [
+          {
+            title: "Informatikingenieurwesen",
+            institution: "Nationale Technologische Universität",
+            date: "Mär 2022 - Gegenwart",
+            location: "Córdoba, Córdoba, Argentinien",
+            icon: "/utnLogo.png",
+            photo: "/comingSoonPhoto.jpg",
+            inverted: false,
+          },
+          {
+            title: "Universitätsanalyst für Informationssysteme",
+            institution: "Nationale Technologische Universität",
+            date: "Mär 2022 - Dez 2024",
+            location: "Córdoba, Córdoba, Argentinien",
+            icon: "/utnLogo.png",
+            photo: "/analystPhoto.jpg",
+            inverted: true,
+          },
+          {
+            title: "Deutschsprachkurs Level A1",
+            institution: "Goethe-Institut",
+            date: "Aug 2023 - Dez 2023",
+            location: "Córdoba, Córdoba, Argentinien",
+            icon: "/goetheInstituteLogo.png",
+            photo: "/deutschlandPhoto.jpg",
+            inverted: false,
+          },
+        ],
+      },
     },
   },
 };
