@@ -2,7 +2,7 @@
   "name": "portafolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://juan-c-ceballos.github.io/portafolio/",
+  "homepage": "https://github.com/Juan-C-Ceballos/portafolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
