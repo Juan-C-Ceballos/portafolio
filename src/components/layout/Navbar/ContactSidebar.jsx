@@ -7,19 +7,25 @@ import { BsCopy } from "react-icons/bs";
 import { motion, AnimatePresence } from 'framer-motion';
 import CopyNotification, { handleCopy } from '../../common/CopyNotification';
 
+import useIsLargeScreen from '../../../hooks/useIsLargeScreen';
+import useIsSmallScreen from '../../../hooks/useIsSmallScreen';
+import useIsXLScreen from '../../../hooks/useIsXLScreen';
+
 const ContactCard = ({ icon, text, btnIcon, action }) => {
+    const isSmall = useIsSmallScreen();
+
     return (
-        <div className='flex items-center justify-between bg-custom-brown-550 p-4 rounded-lg mb-4 text-custom-brown-100'>
+        <div className='flex items-center gap-10 md:gap-0 justify-center md:justify-between bg-custom-brown-550 md:p-4 p-8 rounded-lg md:mb-4 text-custom-brown-100'>
             <div className='flex flex-row items-center gap-10'>
                 <div className='hover:scale-105 transition ease-in-out duration-200'>{icon}</div>
-                <span className='text-lg text-start'>{text}</span>
+                {!isSmall && (<span className='text-lg text-start'>{text}</span>)}
             </div>
             <button
                 onClick={action}
                 className='
                     bg-custom-brown-200 p-2 rounded-lg cursor-pointer
                     hover:bg-custom-brown-300 hover:scale-105 transition ease-in-out duration-200
-                    text-zinc-900'
+                    text-custom-brown-550'
             >{btnIcon}</button>
         </div>
     );
@@ -37,6 +43,10 @@ const ContactSidebar = () => {
 
     const [copiedText, setCopiedText] = useState(null);
 
+    const isLarge = useIsLargeScreen();
+    const isSmall = useIsSmallScreen();
+    const isXL = useIsXLScreen();
+
     return (
         <>
             <AnimatePresence>
@@ -52,7 +62,7 @@ const ContactSidebar = () => {
                         />
                         {/* Sidebar animada */}
                         <motion.aside
-                            className="fixed top-0 left-0 z-50 w-1/3 bg-custom-brown-400 h-full p-4 flex flex-col items-center"
+                            className={`fixed top-0 left-0 z-50 ${isXL ? "w-2/5" : (isLarge ? 'w-1/2' : (isSmall ? 'w-full' : 'w-2/3'))} bg-custom-brown-400 h-full p-4 flex flex-col items-center`}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
@@ -70,33 +80,33 @@ const ContactSidebar = () => {
                                 <IoMdClose size={30} />
                             </motion.button>
 
-                            <h2 className='text-lg font-bold text-center text-custom-brown-800 w-7/8 pt-8 pb-5'>{t('contact.title')}</h2>
+                            <h2 className='text-2xl font-bold text-center text-custom-brown-800 w-7/8 pt-8 pb-5'>{t('contact.title')}</h2>
 
                             <hr className='h-1 bg-gradient-to-r from-custom-brown-300 via-custom-brown-150 to-custom-brown-300 border-0 mt-4 w-7/8' />
 
-                            <div className='flex flex-col justify-center h-full w-full p-2 gap-17'>
+                            <div className='flex flex-col justify-center h-full md:w-full p-2 md:gap-17 gap-5'>
                                 <ContactCard
-                                    icon={<FaLinkedin size={44} />}
+                                    icon={<FaLinkedin size={!isSmall ? 44 : 65} />}
                                     text={t('contact.linkedin.link')}
-                                    btnIcon={<FaExternalLinkAlt size={28} />}
+                                    btnIcon={<FaExternalLinkAlt size={!isSmall ? 28 : 40} />}
                                     action={() => window.open(t('contact.linkedin.link'), '_blank')}
                                 />
                                 <ContactCard
-                                    icon={<FaGithub size={44} />}
+                                    icon={<FaGithub size={!isSmall ? 44 : 65} />}
                                     text={t('contact.github.link')}
-                                    btnIcon={<FaExternalLinkAlt size={28} />}
+                                    btnIcon={<FaExternalLinkAlt size={!isSmall ? 28 : 40} />}
                                     action={() => window.open(t('contact.github.link'), '_blank')}
                                 />
                                 <ContactCard
-                                    icon={<IoIosMail size={44} />}
+                                    icon={<IoIosMail size={!isSmall ? 44 : 65} />}
                                     text={t('contact.mail.link')}
-                                    btnIcon={<BsCopy size={28} />}
+                                    btnIcon={<BsCopy size={!isSmall ? 28 : 40} />}
                                     action={() => handleCopy(t('contact.mail.link'), setCopiedText)}
                                 />
                                 <ContactCard
-                                    icon={<FaPhoneAlt size={44} />}
+                                    icon={<FaPhoneAlt size={!isSmall ? 44 : 65} />}
                                     text={t('contact.phone.link')}
-                                    btnIcon={<BsCopy size={28} />}
+                                    btnIcon={<BsCopy size={!isSmall ? 28 : 40} />}
                                     action={() => handleCopy(t('contact.phone.link'), setCopiedText)}
                                 />
                             </div>

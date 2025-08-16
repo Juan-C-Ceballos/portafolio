@@ -31,14 +31,14 @@ const Technology = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="grid grid-cols-3 items-center gap-6 justify-center">
-            <TechnologyItem icon={<FaReact size={50} />} text={t("aboutMe.technology.content.react")} className="col-start-1 row-start-1"/>
-            <TechnologyItem icon={<FaJava size={50} />} text={t("aboutMe.technology.content.java")} type="square" className="col-start-2 row-start-1" />
-            <TechnologyItem icon={<FaPython size={50} />} text={t("aboutMe.technology.content.python")} className="col-start-3 row-start-1"/>
-            <TechnologyItem icon={<FaGithub size={50} />} text={t("aboutMe.technology.content.github")} type="square" className="col-start-1 row-start-2"/>
-            <TechnologyItem icon={<FaDatabase size={50} />} text={t("aboutMe.technology.content.databases")} className="col-start-2 row-start-2"/>
-            <TechnologyItem icon={<SiPostman size={50} />} text={t("aboutMe.technology.content.postman")} type="square" className="col-start-3 row-start-2"/>
-            <TechnologyItem icon={<SiJavascript size={50} />} text={t("aboutMe.technology.content.javascript")} type="square" className="col-start-2 row-start-3"/>
+        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 items-center gap-6 justify-center">
+            <TechnologyItem icon={<FaReact size={50} />} text={t("aboutMe.technology.content.react")} className="lg:col-start-1 lg:row-start-1"/>
+            <TechnologyItem icon={<FaJava size={50} />} text={t("aboutMe.technology.content.java")} type="square" className="lg:col-start-2 lg:row-start-1" />
+            <TechnologyItem icon={<FaPython size={50} />} text={t("aboutMe.technology.content.python")} className="lg:col-start-3 lg:row-start-1"/>
+            <TechnologyItem icon={<FaGithub size={50} />} text={t("aboutMe.technology.content.github")} type="square" className="lg:col-start-1 lg:row-start-2"/>
+            <TechnologyItem icon={<FaDatabase size={50} />} text={t("aboutMe.technology.content.databases")} className="lg:col-start-2 lg:row-start-2"/>
+            <TechnologyItem icon={<SiPostman size={50} />} text={t("aboutMe.technology.content.postman")} type="square" className="lg:col-start-3 lg:row-start-2"/>
+            <TechnologyItem icon={<SiJavascript size={50} />} text={t("aboutMe.technology.content.javascript")} type="square" className="lg:col-start-2 lg:row-start-3"/>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import ProjectPills from './ProjectPills';
 import TechItem from './TechItem';
 import { IoMdClose } from 'react-icons/io';
 import UnderlinedText from '../common/UnderlinedText';
+import useIsLargeScreen from '../../hooks/useIsLargeScreen';
 
 const iconMap = {
     FaJava: <FaJava size={30} />,
@@ -25,6 +26,8 @@ const iconMap = {
 const ProjectCard = ({ title, description, date, pills, technology, photo, longDescription, language, seeMore }) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const isLarge = useIsLargeScreen();
+
     return (
         <>
             {/* Card normal */}
@@ -40,14 +43,14 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                 </div>
 
                 <div className='px-6 pt-4 flex flex-col justify-center'>
-                    <div className='flex flex-row items-center justify-between'>
+                    <div className='flex flex-col md:flex-row items-center justify-between'>
                         <h2 className='text-3xl font-bold flex-2/3'>{title}</h2>
                         <span className='flex-1/3 text-end'>{date}</span>
                     </div>
 
-                    <p className='text-md my-2'>{description}</p>
+                    <p className='text-md mx-4 my-4 md:mx-0 md:my-2'>{description}</p>
 
-                    <div className='flex flex-row gap-3 justify-start'>
+                    <div className='flex md:flex-row flex-col gap-3 justify-start'>
                         {pills.map((pill) => (
                             <ProjectPills text={pill.label} key={pill.label} />
                         ))}
@@ -76,7 +79,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="bg-custom-brown-150 rounded-4xl p-6 w-[170vh] max-h-[90vh] shadow-2xl"
+                            className="bg-custom-brown-150 rounded-4xl p-6 max-w-[95%] md:max-w-[90%] max-h-[90vh] shadow-2xl"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
@@ -96,27 +99,31 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                                 </motion.button>
                             </div>
 
-                            <div className='flex flex-row items-center justify-start gap-4 mb-4'>
+                            <div className='flex flex-row items-center justify-center md:justify-start gap-4 mb-4'>
                                 <UnderlinedText>
                                     <h2 className="text-4xl font-bold mt-4 mx-4 mb-2">{title}</h2>
                                 </UnderlinedText>
                                 <span className='bg-orange-300/80 px-4 py-1 rounded-xl text-zinc-50 
                                 hover:scale-105 transition ease-in-out duration-200'>{language}</span>
                             </div>
-                            <div className='grid grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
+                            <div className='flex flex-col lg:grid lg:grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
                                 <img src={photo} alt={title} className="rounded-3xl mb-4 col-start-1 col-span-3" />
 
-                                <div className='grid grid-col-[0.1fr, 1fr] grid-rows col-start-4 col-span-1'>
-                                    <div className='border-l-2 border-custom-brown-300 place-self-center h-full mr-4 col-start-1 row-start-1'></div>
-                                    <div className='border-l-2 border-custom-brown-300 place-self-center h-full mr-4 col-start-1 row-start-2'></div>
+                                <div className='lg:grid lg:grid-col-[0.1fr, 1fr] grid-rows col-start-4 col-span-1'>
+                                    {isLarge && (
+                                        <>
+                                            <div className='border-l-2 border-custom-brown-300 place-self-center h-full mr-4 col-start-1 row-start-1'></div>
+                                            <div className='border-l-2 border-custom-brown-300 place-self-center h-full mr-4 col-start-1 row-start-2'></div>
+                                        </>
+                                    )}
 
-                                    <div className='flex flex-col gap-4 mb-4 items-center justify-center col-start-2 col-span-1'>
+                                    <div className='flex flex-col md:flex-row lg:flex-col gap-4 mb-4 items-center justify-center col-start-2 col-span-1'>
                                         {pills.map((pill) => (
                                             <ProjectPills text={pill.label} key={pill.label} />
                                         ))}
                                     </div>
 
-                                    <div className='flex flex-col gap-2 items-center justify-center col-start-2 col-span-1'>
+                                    <div className='grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-col gap-2 items-center justify-center col-start-2 col-span-1'>
                                         {technology.map((tech) => (
                                             <TechItem icon={iconMap[tech.icon]} label={tech.label} key={tech.label} extended={true} />
                                         ))}

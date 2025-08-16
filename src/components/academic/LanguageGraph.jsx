@@ -1,6 +1,7 @@
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 
 import useTranslation from '../../hooks/useTranslation';
+import useIsSmallScreen from '../../hooks/useIsSmallScreen';
 
 // Función para mapear valores numéricos a niveles
 const mapLevel = (value) => {
@@ -55,12 +56,13 @@ const LanguageGraph = () => {
   const { t } = useTranslation();
   const data = t('academic.languageInfo.data');
   const languagesData = t('academic.languageInfo.languages');
+  const isSmall = useIsSmallScreen();
 
   return (
     <div className=''>
       <LineChart
-        width={700}
-        height={400}
+        width={!isSmall ? 700 : 350}
+        height={!isSmall ? 400 : 350}
         data={data}
         margin={{ top: 20, right: 20, bottom: 5, left: 10 }}
       >

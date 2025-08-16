@@ -6,6 +6,8 @@ import useTranslation from '../hooks/useTranslation';
 import UnderlinedText from '../components/common/UnderlinedText';
 import LanguageCard from '../components/academic/LanguageCard';
 
+
+
 const Academic = () => {
     const { t } = useTranslation();
     const academicItems = t('academic.academicInfo.items');
@@ -21,7 +23,7 @@ const Academic = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className='grid grid-cols-2 gap-8 p-4'>
+            <div className="flex flex-col 2xl:grid 2xl:grid-cols-2 gap-8 p-4 items-center 2xl:items-stretch">
                 <motion.div className='p-6 bg-custom-brown-250 rounded-4xl m-2'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -30,9 +32,9 @@ const Academic = () => {
                         scale: { type: "spring", visualDuration: 0.4, bounce: 0. },
                     }}>
                     <UnderlinedText>
-                        <h1 className='text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.academicInfo.title')}</h1>
+                        <h1 className='text-3xl md:text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.academicInfo.title')}</h1>
                     </UnderlinedText>
-                    <div className='flex flex-col items-center justify-start max-h-[75vh] overflow-y-scroll overflow-x-hidden gap-3 custom-scrollbar px-4'>
+                    <div className='flex flex-col items-center justify-start 2xl:max-h-[75vh] overflow-y-scroll overflow-x-hidden gap-3 custom-scrollbar 2xl:px-4'>
                         {academicItems.map((item) => (
                             <AcademicCard
                                 key={item.title}
@@ -57,14 +59,13 @@ const Academic = () => {
                     className='p-6 bg-custom-brown-250 rounded-4xl m-2'>
 
                     <UnderlinedText>
-                        <h1 className='text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.languageInfo.title')}</h1>
+                        <h1 className='text-3xl md:text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.languageInfo.title')}</h1>
                     </UnderlinedText>
 
-                    <div className='bg-custom-brown-50 rounded-2xl p-8 shadow-xl
-                        flex flex-col items-center m-4'>
+                    <div className='bg-custom-brown-50 rounded-2xl p-2 mx-20 my-4 lg:p-8 shadow-xl flex flex-col items-center lg:m-4'>
                         <LanguageGraph />
                     </div>
-                    <div className='flex gap-3 justify-center'>
+                    <div className='flex flex-col lg:flex-row gap-3 justify-center items-center'>
                         {languages.map((lang, index) => (
                             <LanguageCard
                                 key={lang.name}

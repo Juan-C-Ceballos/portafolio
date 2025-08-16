@@ -37,7 +37,7 @@ const AboutColumn = ({ title, icon, content, isActive, onClick }) => {
   return (
     <motion.div
       onClick={onClick}
-      className="bg-custom-brown-50 rounded-xl shadow-lg cursor-pointer flex flex-col p-6 text-custom-brown-850 overflow-hidden"
+      className="bg-custom-brown-50 rounded-xl shadow-lg cursor-pointer flex flex-col p-6 text-custom-brown-850"
       initial="rest"
       animate={isActive ? "active" : "rest"}
       whileHover={!isActive ? "hover" : ""}
@@ -88,12 +88,12 @@ const About = () => {
 
   return (
     <motion.div
-      className="bg-custom-brown-400 h-screen flex flex-col items-center justify-start gap-8"
+      className="bg-custom-brown-400 min-h-screen flex flex-col items-center justify-start gap-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
     >
-      <div className="flex w-full gap-6 min-h-[87vh] px-6 py-5">
+      <div className="flex lg:flex-row flex-col w-full gap-6 min-h-[87vh] px-6 py-5">
         <AboutColumn
           title={t('aboutMe.personal.title')}
           content={<PersonalInfo />}

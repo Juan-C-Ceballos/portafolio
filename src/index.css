@@ -46,3 +46,23 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #dfcfc9;
 }
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #dfcfc9;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 9999px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b58c82;
+  border-radius: 9999px;
+  background-clip: padding-box;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #9e6a62;
+}

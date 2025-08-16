@@ -28,7 +28,7 @@ const SoftSkills = () => {
 
     return (
         <div className='flex justify-center items-center h-full'>
-            <div className='grid grid-cols-2 grid-rows-[1fr,1fr,1fr] gap-10 justify-center'>
+            <div className='flex flex-col md:grid md:grid-cols-2 md:grid-rows-[1fr,1fr,1fr] gap-10 justify-center'>
                 <SkillItem skill={t("aboutMe.softSkills.content.communication")} icon={<FaRegCommentDots size={35}/>} />
                 <SkillItem skill={t("aboutMe.softSkills.content.teamwork")} icon={<AiOutlineTeam size={35}/>} />
                 <hr className='col-span-2 border-custom-brown-300 border-1' />

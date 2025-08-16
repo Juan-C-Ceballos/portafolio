@@ -11,9 +11,9 @@ import useTranslation from '../../hooks/useTranslation';
 
 const PersonalInfoItem = ({ icon, text }) => {
   return (
-    <div className="flex flex-row items-center justify-evenly">
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-center justify-evenly">
       <CirclePhoto content={icon} />
-      <div className="w-2/3 text-justify bg-custom-brown-100 p-4 mx-6 rounded-3xl">
+      <div className="w-2/3 text-center lg:text-justify bg-custom-brown-100 p-4 mx-6 rounded-3xl">
         <span>{text}</span>
       </div>
     </div>
