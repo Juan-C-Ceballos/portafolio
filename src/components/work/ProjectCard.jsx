@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
     const isLarge = useIsLargeScreen();
 
     return (
-        <>
+        <div className='flex flex-col items-center justify-center'>
             {/* Card normal */}
             <div
                 onClick={() => setIsOpen(true)}
@@ -72,14 +72,14 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/50"
+                        className="fixed left-0 right-12 top-0 bottom-0 lg:inset-0 z-50 flex items-center justify-center bg-zinc-900/50"
                         onClick={() => setIsOpen(false)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="bg-custom-brown-150 rounded-4xl p-6 max-w-[95%] md:max-w-[90%] max-h-[90vh] shadow-2xl"
+                            className="bg-custom-brown-150 rounded-4xl p-6 max-w-[80%] max-h-[95%] lg:max-w-[85%] shadow-2xl"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
@@ -109,7 +109,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                             <div className='flex flex-col lg:grid lg:grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
                                 <img src={photo} alt={title} className="rounded-3xl mb-4 col-start-1 col-span-3" />
 
-                                <div className='lg:grid lg:grid-col-[0.1fr, 1fr] grid-rows col-start-4 col-span-1'>
+                                <div className='lg:grid lg:grid-col-[0.1fr, 1fr] grid-rows lg:col-start-4 lg:col-span-1'>
                                     {isLarge && (
                                         <>
                                             <div className='border-l-2 border-custom-brown-300 place-self-center h-full mr-4 col-start-1 row-start-1'></div>
@@ -136,7 +136,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     );
 };
 
