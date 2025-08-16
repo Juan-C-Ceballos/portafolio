@@ -86,7 +86,7 @@ const Home = () => {
                         {!isLarge && (<AnimatedPhoto />)}
                         <div className="pt-3 m-2">
                             <div className="flex items-center gap-2">
-                                <GoDotFill />
+                                <GoDotFill size={!isLarge ? 20 : 30}/>
                                 <span className="text-2xl">
                                     {t("home.description.student")}
                                 </span>
@@ -94,13 +94,13 @@ const Home = () => {
 
 
                             <div className="flex items-center gap-2 lg:pl-12">
-                                <GoDotFill />
+                                <GoDotFill size={!isLarge ? 11 : 30}/>
                                 <span className="text-2xl">{t("home.description.analyst")}</span>
                             </div>
 
 
                             <div className="flex items-center gap-2 lg:pl-24">
-                                <GoDotFill />
+                                <GoDotFill size={!isLarge ? 20 : 30}/>
                                 <span className="text-2xl">{t("home.description.developer")}</span>
                             </div>
 

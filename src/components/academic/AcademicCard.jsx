@@ -14,10 +14,10 @@ const AcademicInfo = ({ title, institution, date, location, icon }) => {
         >
             <img className={`${isLarge ? "w-40 h-50" : "w-[20%] h-[20%]"} object-contain flex-1/4`} src={icon} alt={`${title} icon`} />
             <div className='flex flex-3/4 flex-col items-center lg:items-end justify-center m-2'>
-                <p className='text-2xl font-semibold lg:text-end lg:pb-8'>{title}</p>
-                <p className='lg:text-end'>{institution}</p>
-                <p className='lg:text-end text-zinc-900/80'>{date}</p>
-                <span className='text-end text-zinc-900/80'>{location} <CiLocationOn size={25} className='inline-block' /></span>
+                <p className='text-center text-2xl font-semibold lg:text-end lg:pb-8'>{title}</p>
+                <p className='text-center lg:text-end'>{institution}</p>
+                <p className='text-center lg:text-end text-zinc-900/80'>{date}</p>
+                <span className='text-center lg:text-end text-zinc-900/80'>{location} <CiLocationOn size={25} className='inline-block' /></span>
             </div>
         </motion.div>
     )
