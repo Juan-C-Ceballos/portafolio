@@ -18,13 +18,13 @@ const Academic = () => {
 
     return (
         <motion.div
-            className='bg-custom-brown-400 min-h-screen flex flex-col items-center justify-center'
+            className='bg-custom-brown-400 min-h-screen flex flex-col items-center justify-center overflow-hidden'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
             <div className="flex flex-col 2xl:grid 2xl:grid-cols-2 gap-8 p-4 items-center 2xl:items-stretch">
-                <motion.div className='p-6 bg-custom-brown-250 rounded-4xl m-2'
+                <motion.div className='p-6 bg-custom-brown-550 rounded-4xl m-2'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -56,7 +56,7 @@ const Academic = () => {
                         duration: 0.4,
                         scale: { type: "spring", visualDuration: 0.4, bounce: 0. },
                     }}
-                    className='p-6 bg-custom-brown-250 rounded-4xl m-2'>
+                    className='p-6 bg-custom-brown-550 rounded-4xl m-2'>
 
                     <UnderlinedText>
                         <h1 className='text-3xl md:text-4xl text-center text-zinc-900 font-bold mb-8'>{t('academic.languageInfo.title')}</h1>

@@ -10,7 +10,7 @@ const Work = () => {
 
     return (
         <motion.div
-            className='bg-custom-brown-100 min-h-screen flex flex-col items-center justify-center'
+            className='bg-custom-brown-100 min-h-screen flex flex-col items-center justify-center max-w-full overflow-hidden'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
