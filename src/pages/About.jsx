@@ -29,7 +29,7 @@ const containerVariants = {
 };
 
 const titleVariants = {
-  rest: { opacity: 0, y: 10 },
+  rest: { opacity: 0.7, y: 10 },
   hover: { opacity: 1, y: 0 },
 };
 
@@ -52,7 +52,7 @@ const AboutColumn = ({ title, icon, content, isActive, onClick }) => {
 
       {!isActive && (
         <motion.h2
-          className="text-2xl font-semibold mt-4 text-center"
+          className="text-2xl font-semibold mt-4 text-center text-custom-brown-550"
           variants={titleVariants}
           transition={{ duration: 0.3 }}
         >

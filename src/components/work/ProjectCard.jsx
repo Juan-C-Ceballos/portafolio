@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { FaJava, FaReact, FaPython, FaGoogleDrive, FaFigma } from "react-icons/fa";
 import { SiSpringboot, SiTailwindcss, SiSupabase, SiFastapi, SiMiro, SiCanva } from "react-icons/si";
 import ProjectPills from './ProjectPills';
 import TechItem from './TechItem';
-import { IoMdClose } from 'react-icons/io';
+import { IoMdClose, IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import UnderlinedText from '../common/UnderlinedText';
 import useIsLargeScreen from '../../hooks/useIsLargeScreen';
+
+
 
 const iconMap = {
     FaJava: <FaJava size={30} />,
@@ -23,9 +25,71 @@ const iconMap = {
     SiCanva: <SiCanva size={30} />
 };
 
-const ProjectCard = ({ title, description, date, pills, technology, photo, longDescription, language, seeMore }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const PhotoCarousel = ({ photos, title }) => {
 
+    const [currentPhoto, setCurrentPhoto] = useState(0);
+
+    useEffect(() => {
+        if (photos.length > 1) {
+            const interval = setInterval(() => {
+                setCurrentPhoto(prev => (prev + 1) % photos.length);
+            }, 7000);
+            return () => clearInterval(interval);
+        }
+    }, [photos]);
+
+    // Funciones para control manual
+    const nextPhoto = () => setCurrentPhoto((prev) => (prev + 1) % photos.length);
+    const prevPhoto = () => setCurrentPhoto((prev) => (prev - 1 + photos.length) % photos.length);
+    const goToPhoto = (index) => setCurrentPhoto(index);
+
+    return (
+        <div className="relative col-start-1 col-span-3 flex items-center justify-center">
+            <AnimatePresence mode="wait">
+                <motion.img
+                    key={currentPhoto}
+                    src={photos[currentPhoto]}
+                    alt={`${title} - imagen ${currentPhoto + 1}`}
+                    className="rounded-3xl mb-4 max-w-full h-auto"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                />
+            </AnimatePresence>
+
+            {/* Botón anterior */}
+            <button
+                onClick={prevPhoto}
+                className="absolute left-3 bg-zinc-900/40 text-white p-2 rounded-full hover:bg-zinc-900/70 transition ease-in-out duration-200"
+            >
+                <IoIosArrowBack />
+            </button>
+
+            {/* Botón siguiente */}
+            <button
+                onClick={nextPhoto}
+                className="absolute right-3 bg-zinc-900/40 text-white p-2 rounded-full hover:bg-zinc-900/70 transition ease-in-out duration-200"
+            >
+                <IoIosArrowForward />
+            </button>
+
+            {/* Indicadores (dots) */}
+            <div className="absolute bottom-8 gap-2 flex space-x-2">
+                {photos.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => goToPhoto(index)}
+                        className={`w-3 h-3 rounded-full ${index === currentPhoto ? "bg-custom-brown-450" : "bg-custom-brown-150"}`}
+                    />
+                ))}
+            </div>
+        </div>
+    )
+}
+
+const ProjectCard = ({ title, description, date, pills, technology, photo, photoCarousel, longDescription, language, seeMore }) => {
+    const [isOpen, setIsOpen] = useState(false);
     const isLarge = useIsLargeScreen();
 
     return (
@@ -37,7 +101,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                     transition ease-in-out duration-200 shadow-lg cursor-pointer"
             >
                 <div className='relative'>
-                    <span className="absolute top-3 right-6 bg-orange-400/60 px-4 py-1 rounded-xl text-sm text-zinc-50">                        {language}
+                    <span className="absolute top-3 right-6 bg-orange-400/60 px-4 py-1 rounded-xl text-sm text-zinc-50">{language}
                     </span>
                     <img className="rounded-t-4xl" src={photo} alt={title} />
                 </div>
@@ -73,7 +137,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                 {isOpen && (
                     <motion.div
                         className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/50 p-4"
-                        onClick={() => setIsOpen(false)}
+
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -107,7 +171,8 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, longD
                                 hover:scale-105 transition ease-in-out duration-200'>{language}</span>
                             </div>
                             <div className='flex flex-col lg:grid lg:grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
-                                <img src={photo} alt={title} className="rounded-3xl mb-4 col-start-1 col-span-3 max-w-full h-auto" />
+
+                                <PhotoCarousel photos={photoCarousel} title={title} />
 
                                 <div className='lg:grid lg:grid-col-[0.1fr, 1fr] grid-rows lg:col-start-4 lg:col-span-1'>
                                     {isLarge && (
