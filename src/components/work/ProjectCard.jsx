@@ -44,7 +44,7 @@ const PhotoCarousel = ({ photos, title }) => {
     const goToPhoto = (index) => setCurrentPhoto(index);
 
     return (
-        <div className="relative col-start-1 col-span-3 flex items-center justify-center">
+        <div className="relative flex items-center justify-center overflow-x-hidden">
             <AnimatePresence mode="wait">
                 <motion.img
                     key={currentPhoto}
@@ -80,7 +80,7 @@ const PhotoCarousel = ({ photos, title }) => {
                     <button
                         key={index}
                         onClick={() => goToPhoto(index)}
-                        className={`w-3 h-3 rounded-full ${index === currentPhoto ? "bg-custom-brown-450" : "bg-custom-brown-150"}`}
+                        className={`w-2 h-2 rounded-full ${index === currentPhoto ? "bg-custom-brown-450" : "bg-custom-brown-150"}`}
                     />
                 ))}
             </div>
@@ -165,7 +165,7 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, photo
 
                             <div className='flex flex-row items-center justify-center md:justify-start gap-4 mb-4'>
                                 <UnderlinedText>
-                                    <h2 className="text-4xl font-bold mt-4 mx-4 mb-2">{title}</h2>
+                                    <h2 className="lg:text-4xl font-bold mt-4 mx-4 mb-2 text-2xl">{title}</h2>
                                 </UnderlinedText>
                                 <span className='bg-orange-300/80 px-4 py-1 rounded-xl text-zinc-50 
                                 hover:scale-105 transition ease-in-out duration-200'>{language}</span>
