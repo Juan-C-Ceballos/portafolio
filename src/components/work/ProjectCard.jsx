@@ -50,7 +50,7 @@ const PhotoCarousel = ({ photos, title }) => {
                     key={currentPhoto}
                     src={photos[currentPhoto]}
                     alt={`${title} - imagen ${currentPhoto + 1}`}
-                    className="rounded-3xl mb-4 max-w-full h-auto"
+                    className="rounded-3xl mb-4 max-w-full max-h-[60vh] object-contain"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
@@ -172,7 +172,9 @@ const ProjectCard = ({ title, description, date, pills, technology, photo, photo
                             </div>
                             <div className='flex flex-col lg:grid lg:grid-cols-4 gap-4 max-h-[75vh] overflow-y-scroll custom-scrollbar'>
 
-                                <PhotoCarousel photos={photoCarousel} title={title} />
+                                <div className='lg:col-start-1 lg:col-span-3'>
+                                    <PhotoCarousel photos={photoCarousel} title={title} />
+                                </div>
 
                                 <div className='lg:grid lg:grid-col-[0.1fr, 1fr] grid-rows lg:col-start-4 lg:col-span-1'>
                                     {isLarge && (
