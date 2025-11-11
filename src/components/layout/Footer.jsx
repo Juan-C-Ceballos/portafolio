@@ -42,7 +42,7 @@ const Footer = () => {
                     <span className='text-center'><span className='font-bold'>{t('contact.phone.name')}: {!isLarge && <br/>} </span>{t('contact.phone.link')}</span>
                 </div>
             </div>
-            <p className='text-center lg:text-start lg:pb-0 pb-2'>&copy; {new Date().getFullYear()} {t('footer.copyright')} v.1.3.1</p>
+            <p className='text-center lg:text-start lg:pb-0 pb-2'>&copy; {new Date().getFullYear()} {t('footer.copyright')} v.1.3.2</p>
         </footer>
     );
 };

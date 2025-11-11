@@ -39,7 +39,7 @@ const translations = {
     home: {
       title: "Hola, Soy Juan Cruz Ceballos",
       description: {
-        student: "Estudiante de Ingeniería en Sistemas",
+        student: "Estudiante Avanzado de Ingeniería en Sistemas",
         analyst: "Analista de Sistemas",
         developer: "Desarrollador Frontend & Backend",
       },
@@ -259,9 +259,9 @@ const translations = {
             inverted: false,
           },
           {
-            title: "[Principiante] Testing Automátizado en JavaScript ",
+            title: "[Principiante] Testing Automátizado en Java",
             institution: "EPAM Systems",
-            date: "Sep 2025 - Presente",
+            date: "Sep 2025 - Nov 2025",
             location: "Argentina",
             icon: "epamTittle.png",
             photo: "epamLogo.png",
@@ -339,7 +339,7 @@ const translations = {
     home: {
       title: "Hi, I'm Juan Cruz Ceballos",
       description: {
-        student: "Systems Engineering Student",
+        student: "Systems Engineering Advanced Student",
         analyst: "Systems Analyst",
         developer: "Frontend & Backend Developer",
       },
@@ -559,9 +559,9 @@ const translations = {
             inverted: false,
           },
           {
-            title: "[Beginner] Automated Testing in JavaScript",
+            title: "[Beginner] Automated Testing in Java",
             institution: "EPAM Systems",
-            date: "Sep 2025 - Present",
+            date: "Sep 2025 - Nov 2025",
             location: "Argentina",
             icon: "epamTittle.png",
             photo: "epamLogo.png",
@@ -640,7 +640,7 @@ const translations = {
     home: {
       title: "Hallo, ich bin Juan Cruz Ceballos",
       description: {
-        student: "Student der Systemtechnik",
+        student: "Fortgeschrittener Student der Systemtechnik",
         analyst: "Systemanalytiker",
         developer: "Frontend- & Backend-Entwickler",
       },
@@ -860,9 +860,9 @@ const translations = {
             inverted: false,
           },
           {
-            title: "[Anfänger] Automatisiertes Testen in JavaScript",
+            title: "[Anfänger] Automatisiertes Testen in Java",
             institution: "EPAM Systems",
-            date: "Sep 2025 - Gegenwart",
+            date: "Sep 2025 - Nov 2025",
             location: "Argentinien",
             icon: "epamTittle.png",
             photo: "epamLogo.png",
