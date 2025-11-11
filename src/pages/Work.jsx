@@ -15,7 +15,7 @@ const Work = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className='flex flex-col lg:grid lg:grid-cols-3 gap-y-10 gap-x-5 p-20 md:p-10'>
+            <div className='flex flex-col lg:grid lg:grid-cols-3 gap-y-10 gap-x-5 p-20 md:p-10 items-start'>
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={index}

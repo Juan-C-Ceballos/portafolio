@@ -225,6 +225,35 @@ const translations = {
             "Consistió en un proyecto académico enfocado en el análisis y diseño de un plan de mejora integral para Stoller Argentina, orientado a optimizar el proceso productivo, ampliar la capacidad operativa y modernizar la infraestructura tecnológica de la empresa. El trabajo incluyó un diagnóstico detallado mediante herramientas como análisis FODA, matriz CAME y mapeo de procesos, identificando oportunidades de crecimiento y áreas críticas de mejora. Se desarrolló una propuesta estratégica basada en tres ejes: incorporación de tecnologías de automatización y trazabilidad, implementación de sistemas de análisis y predicción de demanda, y transición hacia un modelo de producción proactiva. Además, se planificó la coordinación organizacional, el esquema de red industrial y la proyección presupuestaria, junto con un cronograma de implementación y tableros de control para el seguimiento de indicadores clave.",
           language: "Español",
         },
+        {
+          title: "Turnero Médico",
+          description:
+            "Aplicación para optimizar y centralizar la gestión de turnos médicos. Permite administrar pacientes, médicos y especialidades, organizar agendas, evitar superposiciones horarias y facilitar el acceso a historiales clínicos y recetas electrónicas.",
+          date: "Oct 2025 - Nov 2025",
+          pills: [
+            { label: "Proyecto Académico" },
+            { label: "Equipo de 5 Miembro" },
+            { label: "Desarrollador Fullstack" },
+          ],
+          technology: [
+            { label: "Python", icon: "FaPython" },
+            { label: "FastAPI", icon: "SiFastapi" },
+            { label: "React", icon: "FaReact" },
+            { label: "Tailwind CSS", icon: "SiTailwindcss" },
+          ],
+          photo: "turneroMedicoPhoto.jpg",
+          photoCarousel: [
+            "turneroMedico/turnero-1.jpg",
+            "turneroMedico/turnero-2.jpg",
+            "turneroMedico/turnero-3.jpg",
+            "turneroMedico/turnero-4.jpg",
+            "turneroMedico/turnero-5.jpg",
+            "turneroMedico/turnero-6.jpg",
+          ],
+          longDescription:
+            "Turnero Médico es una aplicación diseñada para optimizar y centralizar la gestión de turnos médicos. El sistema permite una administración completa (ABM) de pacientes (con su obra social), médicos (con su especialidad única) y catálogos de configuración como especialidades y roles. El módulo central de agendas facilita la configuración de horarios de atención recurrentes para los médicos y gestiona la asignación de turnos, validando activamente para evitar superposiciones horarias. Incluye un módulo clínico donde los profesionales pueden registrar el historial digital del paciente (diagnóstico, tratamiento) y emitir recetas electrónicas tras las consultas atendidas. La plataforma se basa en un sistema de autenticación y autorización por roles (Administrador, Secretario/a, Médico, Paciente), ofreciendo portales de autogestión. Los pacientes pueden solicitar y cancelar sus propios turnos, mientras que los médicos gestionan su agenda y el historial clínico. Finalmente, provee un módulo de reportes operativos y un gráfico estadístico de asistencia vs. inasistencia.",
+          language: "Español",
+        },
       ],
     },
     academic: {
@@ -524,6 +553,35 @@ const translations = {
           longDescription:
             "This academic project focused on analyzing and designing a comprehensive improvement plan for Stoller Argentina, aimed at optimizing the production process, expanding operational capacity, and modernizing the company’s technological infrastructure. The work included a detailed diagnosis using tools such as SWOT analysis, CAME matrix, and process mapping, identifying growth opportunities and critical areas for improvement. The strategic proposal was based on three main pillars: the incorporation of automation and traceability technologies, the implementation of demand analysis and forecasting systems, and the transition toward a proactive production model. In addition, organizational coordination, industrial network design, and budget projection were planned, along with an implementation timeline and control dashboards for monitoring key performance indicators.",
           language: "Spanish",
+        },
+        {
+          title: "Medical Appointment Scheduler",
+          description:
+            "Application to optimize and centralize the management of medical appointments. It allows managing patients, doctors, and specialties, organizing schedules, avoiding scheduling conflicts, and facilitating access to clinical histories and electronic prescriptions.",
+          date: "Oct 2025 - Nov 2025",
+          pills: [
+            { label: "Academic Project" },
+            { label: "5-Member Team" },
+            { label: "Fullstack Developer" },
+          ],
+          technology: [
+            { label: "Python", icon: "FaPython" },
+            { label: "FastAPI", icon: "SiFastapi" },
+            { label: "React", icon: "FaReact" },
+            { label: "Tailwind CSS", icon: "SiTailwindcss" },
+          ],
+          photo: "turneroMedicoPhoto.jpg",
+          photoCarousel: [
+            "turneroMedico/turnero-1.jpg",
+            "turneroMedico/turnero-2.jpg",
+            "turneroMedico/turnero-3.jpg",
+            "turneroMedico/turnero-4.jpg",
+            "turneroMedico/turnero-5.jpg",
+            "turneroMedico/turnero-6.jpg",
+          ],
+          longDescription:
+            "Medical Appointment Scheduler is an application designed to optimize and centralize medical appointment management. The system allows for complete administration (CRUD) of patients (with their health insurance), doctors (with their unique specialty), and configuration catalogs such as specialties and roles. The central scheduling module facilitates the configuration of recurring office hours for doctors and manages appointment assignments, actively validating to prevent scheduling overlaps. It includes a clinical module where professionals can record the patient's digital history (diagnosis, treatment) and issue electronic prescriptions after attended consultations. The platform is based on an authentication and authorization system by roles (Administrator, Secretary, Doctor, Patient), offering self-management portals. Patients can request and cancel their own appointments, while doctors manage their schedule and clinical history. Finally, it provides a module for operational reports and a statistical graph comparing attendance vs. non-attendance.",
+          language: "English",
         },
       ],
     },
@@ -825,6 +883,35 @@ const translations = {
           longDescription:
             "Dieses akademische Projekt konzentrierte sich auf die Analyse und Entwicklung eines umfassenden Verbesserungsplans für Stoller Argentina, mit dem Ziel, den Produktionsprozess zu optimieren, die Betriebskapazität zu erweitern und die technologische Infrastruktur des Unternehmens zu modernisieren. Die Arbeit umfasste eine detaillierte Diagnose mithilfe von Werkzeugen wie SWOT-Analyse, CAME-Matrix und Prozessmapping, um Wachstumschancen und kritische Verbesserungsbereiche zu identifizieren. Der strategische Vorschlag basierte auf drei Hauptsäulen: der Einführung von Automatisierungs- und Rückverfolgbarkeitstechnologien, der Implementierung von Systemen zur Analyse und Prognose der Nachfrage sowie dem Übergang zu einem proaktiven Produktionsmodell. Darüber hinaus wurden die organisatorische Koordination, das industrielle Netzwerkschema und die Budgetprognose geplant, zusammen mit einem Implementierungszeitplan und Kontroll-Dashboards zur Überwachung wichtiger Leistungsindikatoren.",
           language: "Spanisch",
+        },
+        {
+          title: "Medizinische Terminplanung",
+          description:
+            "Anwendung zur Optimierung und Zentralisierung der Verwaltung von Arztterminen. Ermöglicht die Verwaltung von Patienten, Ärzten und Fachgebieten, die Organisation von Terminkalendern, die Vermeidung von Terminüberschneidungen und den einfachen Zugriff auf elektronische Patientenakten und Rezepte.",
+          date: "Okt 2025 - Nov 2025",
+          pills: [
+            { label: "Akademisches Projekt" },
+            { label: "Team mit 5 Mitgliedern" },
+            { label: "Fullstack-Entwickler" },
+          ],
+          technology: [
+            { label: "Python", icon: "FaPython" },
+            { label: "FastAPI", icon: "SiFastapi" },
+            { label: "React", icon: "FaReact" },
+            { label: "Tailwind CSS", icon: "SiTailwindcss" },
+          ],
+          photo: "turneroMedicoPhoto.jpg",
+          photoCarousel: [
+            "turneroMedico/turnero-1.jpg",
+            "turneroMedico/turnero-2.jpg",
+            "turneroMedico/turnero-3.jpg",
+            "turneroMedico/turnero-4.jpg",
+            "turneroMedico/turnero-5.jpg",
+            "turneroMedico/turnero-6.jpg",
+          ],
+          longDescription:
+            "Medizinische Terminplanung ist eine Anwendung, die entwickelt wurde, um die Verwaltung von Arztterminen zu optimieren und zu zentralisieren. Das System ermöglicht eine vollständige Verwaltung (CRUD) von Patienten (mit ihrer Krankenversicherung), Ärzten (mit ihrem einzigen Fachgebiet) und Konfigurationskatalogen wie Fachgebieten und Rollen. Das zentrale Kalendermodul erleichtert die Konfiguration wiederkehrender Sprechzeiten für Ärzte und verwaltet die Zuweisung von Terminen, wobei aktiv validiert wird, um Terminüberschneidungen zu vermeiden. Es umfasst ein klinisches Modul, in dem Fachkräfte die digitale Krankengeschichte des Patienten (Diagnose, Behandlung) erfassen und nach den behandelten Konsultationen elektronische Rezepte ausstellen können. Die Plattform basiert auf einem Authentifizierungs- und Autorisierungssystem nach Rollen (Administrator, Sekretär/in, Arzt, Patient) und bietet Selbstverwaltungsportale. Patienten können ihre eigenen Termine anfordern und stornieren, während Ärzte ihren Terminkalender und die Krankengeschichte verwalten. Schließlich bietet es ein Modul für operative Berichte und eine statistische Grafik zum Vergleich von Anwesenheit und Abwesenheit.",
+          language: "Deutsch",
         },
       ],
     },
